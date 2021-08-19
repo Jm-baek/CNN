@@ -71,7 +71,7 @@ stride를 키우면 **공간적인 feature 특성을 손실할 가능성이 높�
 - filter의 개수에 따라 output chanel 수가 결정된다.
 - **확실하게 이해하고 넘어가야 다른 글이나 논문들을 읽을 때 shape를 이해할 수 있다!!**
 
-![image](https://user-images.githubusercontent.com/57121112/130015042-913c39d4-78de-41b4-a39a-9f42ac15d4ce.png)
+![image](https://user-images.githubusercontent.com/57121112/130015139-bd620f4f-fd25-43a7-bd96-b73c7e311b1d.png)
 
 ## Quiz
 ![image](https://user-images.githubusercontent.com/57121112/119850632-af07b300-bf48-11eb-860a-2142caf04ca5.png)
