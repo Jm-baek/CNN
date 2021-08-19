@@ -1,7 +1,7 @@
 ## 본 내용은 인프런의 강의명(딥러닝 CNN 완벽 가이드 - Fundamental 편)를 듣고 요약했습니다. 
     수업에서 제공하는 이미지입니다. 이미지를 함부로 사용하지 말아주세요!!!
 
-기억이 안난다면 돌아가서 다시본다. 돌아가서 보는 것은 **용기**다!<br/>
+선생님 명언: 기억이 안난다면 돌아가서 다시본다. 돌아가서 보는 것은 **용기**다!<br/>
 
 #### Image Classification
 Image -> Feature Extraction -> Image Classification(Fully connected layer)<br/>
