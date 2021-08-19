@@ -59,9 +59,12 @@ stride를 키우면 **공간적인 feature 특성을 손실할 가능성이 높�
 ![image](https://user-images.githubusercontent.com/57121112/121206593-8e7a1a00-c8b3-11eb-9696-3400147d2b9e.png)
 
 ### pooling(subsmapling)
-- Conv 적용된 Feature map의 일정 영역 별로 하나의 값을 추출하여(MAX 또는 Average 적용) Feature map의 사이지를 줄임(sub sampling). 일반적으로 Pooling 크기와 Stride를 동일하게 부여하여 모든 값이 한번만 처리 될수 있도록함.
+- Conv 적용된 Feature map의 일정 영역 별로 하나의 값을 추출하여(MAX 또는 Average 적용) Feature map의 사이지를 줄임
 - 일정 영역에서 가장 큰 값(MAX) 도는 평균값(Average)을 추출하므로 위치의 변화에 따른 feature의 변화를 일정 수준 중화시킬 수 있다. 
+- Feature Map의 크기를 줄이면 위치의 변화에 따른 feature 값의 영향도를 줄여서(Spatial invariance) Generalization, 오버피팅 감소 등의 장점을 얻을 수 있다.
 - Max Pooling의 경우 Sharp한 feature 값을 추출하고 Average Pooling의 경우 Smooth한 feature 값을 추출
+- LeNet, AlexNet, VGG의 경우는 CNN(Stride/Padding) -> Activation -> Pooling으로 이어지는 전형적인 구조
+- 하지만, ResNet부터 이어지는 최근 CNN에서는 최대한 Pooling을 자제하고 Stride를 이용하여 Netwokr를 구성하고 있다.
 
 ### 다채널 입력 데이터의 Conv 적용 이해
 + 출력 Feature Map의 채널 수는 conv를 적용한 Filter의 개수로 결정됨
