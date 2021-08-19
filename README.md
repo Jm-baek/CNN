@@ -1,5 +1,5 @@
 ## 본 내용은 인프런의 강의명(딥러닝 CNN 완벽 가이드 - Fundamental 편)를 듣고 요약했습니다. 
-    이미지를 함부로 사용하지 말아주세요
+    수업에서 제공하는 이미지입니다. 이미지를 함부로 사용하지 말아주세요!!!
 
 기억이 안난다면 돌아가서 다시본다. 돌아가서 보는 것은 **용기**다!<br/>
 
@@ -70,6 +70,8 @@ stride를 키우면 **공간적인 feature 특성을 손실할 가능성이 높�
 - input channel 개수에 따라 filter의 kernel channel 수가 동일해야한다.
 - filter의 개수에 따라 output chanel 수가 결정된다.
 - **확실하게 이해하고 넘어가야 다른 글이나 논문들을 읽을 때 shape를 이해할 수 있다!!**
+
+![image](https://user-images.githubusercontent.com/57121112/130015042-913c39d4-78de-41b4-a39a-9f42ac15d4ce.png)
 
 ## Quiz
 ![image](https://user-images.githubusercontent.com/57121112/119850632-af07b300-bf48-11eb-860a-2142caf04ca5.png)
