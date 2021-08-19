@@ -39,11 +39,6 @@ Deep Learning CNN은 Fiter 값(가중치?)을 사용자가 만들거나 선택�
 - 하지만, 큰 사이즈의 Kernel(Filter)로 Convolution 연산을 할 경우 훨씬 많은 연산량과 파라미터가 필요함.
 
 --------------------------------------------------------
-### Feature Map
-CNN을 적용한 output이 feature map이다~!
-![image](https://user-images.githubusercontent.com/57121112/121205324-88d00480-c8b2-11eb-8ffd-92c21ebad53f.png)
-
-
 
 ### padding
 - Filter를 적용하여 Conv 연산 수행 시 출력 Feature Map이 입력 Feature Map 대비 계속적으로 작아지는 것을 막기 위해 적용
@@ -65,14 +60,14 @@ stride를 키우면 **공간적인 feature 특성을 손실할 가능성이 높�
 - Max Pooling의 경우 Sharp한 feature 값을 추출하고 Average Pooling의 경우 Smooth한 feature 값을 추출
 - LeNet, AlexNet, VGG의 경우는 CNN(Stride/Padding) -> Activation -> Pooling으로 이어지는 전형적인 구조
 - 하지만, ResNet부터 이어지는 최근 CNN에서는 최대한 Pooling을 자제하고 Stride를 이용하여 Netwokr를 구성하고 있다.
-
+-----------------------------------------------------------
 ### 다채널 입력 데이터의 Conv 적용
 - input channel 개수에 따라 filter의 kernel channel 수가 동일해야한다. (파랑색 숫자)
 - filter의 개수에 따라 output chanel 수가 결정된다. (붉은색 사각형)
 - **확실하게 이해하고 넘어가야 다른 글이나 논문들을 읽을 때 shape를 이해할 수 있다!!**
 
 ![image](https://user-images.githubusercontent.com/57121112/130015139-bd620f4f-fd25-43a7-bd96-b73c7e311b1d.png)
-
+-----------------------------------------------------------
 ## Quiz
 ![image](https://user-images.githubusercontent.com/57121112/119850632-af07b300-bf48-11eb-860a-2142caf04ca5.png)
 1. Filter의 개수는?
