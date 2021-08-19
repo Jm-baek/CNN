@@ -27,6 +27,7 @@ feature map의 크기는 줄지만, channel 수가 증가하여 두껍게 변한
 Filter는 여러 개의 커널(kernel)로 이루어져있다.<br/>
 커널의 개수가 channle의 개수이다.<br/>
 Conv2D(filter=32, kernel_size=3)(input_tensor)<br/>
+아래 이미지로는 filter 32개이고 각 filter 안의 kernel size 3 x 3이고 개수는 알 수없다.<br/>
 ![image](https://user-images.githubusercontent.com/57121112/121202589-60470b00-c8b0-11eb-9994-0530e8ca5255.png)
 
 Deep Learning CNN은 Fiter 값을 사용자가 만들거나 선택할 필요가 없다. **최적의 fitler 값을 학습을 통해 스스로 최적화함.**
