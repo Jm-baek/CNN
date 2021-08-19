@@ -87,7 +87,7 @@ stride를 키우면 **공간적인 feature 특성을 손실할 가능성이 높�
 
 ## 출력 Feature Map 크기 계산 공식
 
-$O = \frac{I - F + 2P}{S} + 1$ 
+$O = \frac{I - F + 2P}{S} + 1$  
 I는 입력 Feature Map의 크기  
 F는 Filter의 크기(Kernel size), F=3은 3X3 Filter를 의미,   
 P는 Padding(정수),  좌우상하 동일하게 적용  
