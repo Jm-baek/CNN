@@ -10,7 +10,7 @@ Low-level Feature -> Mid-Level Feature -> High-Level Feature -> Trainable Classi
 ![image](https://user-images.githubusercontent.com/57121112/121198441-1872b480-c8ad-11eb-8c6a-749121f02a6b.png)
 
 ## CNN(Convolution)을 한다는 것은~?
-CNN은 **Feature Extraction을 하는 것이다.<br/>
+단순하게 CNN이라고 하면 **Feature Extraction**을 하는 것이다.<br/>
 Classification과는 별개!<br/>
 
 - Classification에 맞는 최적의 Feature를 추출
@@ -30,7 +30,7 @@ Conv2D(filter=32, kernel_size=3)(input_tensor)<br/>
 아래 이미지로는 filter 32개이고 각 filter 안의 kernel size 3 x 3이고 개수는 알 수없다.<br/>
 ![image](https://user-images.githubusercontent.com/57121112/121202589-60470b00-c8b0-11eb-9994-0530e8ca5255.png)
 
-Deep Learning CNN은 Fiter 값을 사용자가 만들거나 선택할 필요가 없다. **최적의 fitler 값을 학습을 통해 스스로 최적화함.**
+Deep Learning CNN은 Fiter 값(가중치?)을 사용자가 만들거나 선택할 필요가 없다.<br/>
 
 ------------------------------------------------------
 ### kernel size 특징
@@ -58,7 +58,7 @@ Conv Filter를 적용할 때 Sliding Window가 **이동하는 가격을 의미**
 stride를 키우면 **공간적인 feature 특성을 손실할 가능성이 높다.** 하지만, 오히려 **불필요한 특성을 제거하는 효과**를 가져오고 또한 **Convolution 연산 속도를 향상** 시킴.
 ![image](https://user-images.githubusercontent.com/57121112/121206593-8e7a1a00-c8b3-11eb-9696-3400147d2b9e.png)
 
-### pooling
+### pooling(subsmapling)
 - Conv 적용된 Feature map의 일정 영역 별로 하나의 값을 추출하여(MAX 또는 Average 적용) Feature map의 사이지를 줄임(sub sampling). 일반적으로 Pooling 크기와 Stride를 동일하게 부여하여 모든 값이 한번만 처리 될수 있도록함.
 - 일정 영역에서 가장 큰 값(MAX) 도는 평균값(Average)을 추출하므로 위치의 변화에 따른 feature의 변화를 일정 수준 중화시킬 수 있다. 
 - Max Pooling의 경우 Sharp한 feature 값을 추출하고 Average Pooling의 경우 Smooth한 feature 값을 추출
