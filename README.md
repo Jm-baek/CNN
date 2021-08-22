@@ -1,6 +1,6 @@
 ## 목차 
 1. Convolutional_NN
- - 합성공에 관한 기본적인 내용을 작성했습니다.
+   - 합성공에 관한 기본적인 내용을 작성했습니다.
 2. Basic_Models
  - 초기 CNN 모델 기법에 대해 작성했습니다. 
 3. Advanced_Models
