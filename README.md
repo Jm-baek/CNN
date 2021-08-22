@@ -10,6 +10,6 @@
    - 여러 새로운 기법을 적용한 CNN 모델에 대해 작성했습니다.
 
 ### 참고 자료
-  - 딥러닝 CNN 완벽 가이드  
-      Fundamental 편(https://www.inflearn.com/course/%EB%94%A5%EB%9F%AC%EB%8B%9D-cnn-%EC%99%84%EB%B2%BD-%EA%B8%B0%EC%B4%88)
+  - 딥러닝 CNN 완벽 가이드 Fundamental 편
+      - https://www.inflearn.com/course/%EB%94%A5%EB%9F%AC%EB%8B%9D-cnn-%EC%99%84%EB%B2%BD-%EA%B8%B0%EC%B4%88
   - 등등
