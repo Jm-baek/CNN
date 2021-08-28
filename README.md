@@ -7,13 +7,13 @@ CNN ->  Basic Models -> Advanced Models <br/>
 pricatice: 연습 디렉토리
 
 ### 목차 
-#### Convolutional_NN
+#### 1. Convolutional_NN
  - 합성공에 관한 기본적인 내용을 작성했습니다.
    
-#### Basic_Models
+#### 2. Basic_Models
  - 초기 CNN 모델 기법에 대해 작성했습니다. 
    
-#### Advanced_Models
+#### 3. Advanced_Models
 - 새로운 기법을 적용한 CNN 모델에 대해 작성했습니다.
 
 ### 참고 자료
