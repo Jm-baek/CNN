@@ -16,6 +16,19 @@ CNN ->  Basic Models -> Advanced Models <br/>
 #### 3. Advanced_Models
 - 새로운 기법을 적용한 CNN 모델에 대해 작성했습니다.
 
+#### 4. Object Detection
+- One-Stage detection
+      - Yolo v1
+      - SSD
+- Two-Stage detection
+      - RCNN
+      - Faster RCNN
+
+#### 5. OBject Detection API
+- Tensorflow Object Detection
+- MMdetection
+
+
 ### 참고 자료
 - 강의
       - 딥러닝 CNN 완벽 가이드 Fundamental 편
