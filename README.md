@@ -17,10 +17,10 @@ CNN ->  Basic Models -> Advanced Models <br/>
 - 새로운 기법을 적용한 CNN 모델에 대해 작성했습니다.
 
 #### 4. Object Detection
-- One-Stage detection
+ - One Stage detection
       - Yolo v1
       - SSD
-- Two-Stage detection
+ - Two Stage detection
       - RCNN
       - Faster RCNN
 
