@@ -10,11 +10,11 @@ CNN ->  Basic Models -> Advanced Models <br/>
 #### 1. Convolutional_NN
  - 합성공에 관한 기본적인 내용을 작성했습니다.
    
-#### 2. Basic_Models
- - 초기 CNN 모델 기법에 대해 작성했습니다. 
+#### 2. Basic_Models(Network)
+ - 초기 CNN 네트워크 기법에 대해 작성했습니다. 
    
-#### 3. Advanced_Models
-- 새로운 기법을 적용한 CNN 모델에 대해 작성했습니다.
+#### 3. Advanced_Models(Netwokr)
+- 새로운 기법을 적용한 CNN 네트워크 대해 작성했습니다.
 
 #### 4. Object Detection
  - One Stage detection
