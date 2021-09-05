@@ -1,10 +1,10 @@
-## 본 레포지토리는 합성곱 신경망(Convolutional Neural Network)에 대해 공부한 내용입니다.
+## 합성곱 신경망(Convolutional Neural Network)에 대해 공부한 내용입니다.
       - 본 내용의 이미지 및 내용을 함부로 복제 사용하지 말아주세요~!
       
 
 ### 순서
 CNN ->  Basic Models -> Advanced Models <br/>
-pricatice: 연습 디렉토리
+그 외 pricatice: 연습 디렉토리
 
 ### 목차 
 #### 1. Convolutional_NN
