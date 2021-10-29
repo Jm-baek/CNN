@@ -3,7 +3,7 @@
       
 
 ### 순서
-CNN ->  Basic Models -> Advanced Models <br/>
+CNN ->  Basic Models(backbone) -> Advanced Models(backbone) <br/>
 그 외 pricatice: 연습 디렉토리
 
 ### 목차 
