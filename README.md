@@ -20,10 +20,10 @@ CNN ->  Basic Models(backbone) -> Advanced Models(backbone) -> Object Detection 
       - Faster RCNN
 
 #### 5. OBject Detection API
-- 객체인식에서 많이 사용하는 API 입니다.
+많이 사용하는 API 입니다.
 - Tensorflow Object Detection
-- MMdetection
-- Detectron2
+- MMdetection(pytorch)
+- Detectron2(pytorch)
 
 
 ### 참고 자료
