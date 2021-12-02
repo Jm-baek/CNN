@@ -1,22 +1,17 @@
 ## 합성곱 신경망(Convolutional Neural Network)에 대해 공부한 내용입니다.
       - 본 내용의 이미지 및 내용을 함부로 복제 사용하지 말아주세요~!
       
-
 ### 순서
-CNN ->  Basic Models(backbone) -> Advanced Models(backbone) <br/>
-그 외 pricatice: 연습 디렉토리
+CNN ->  Basic Models(backbone) -> Advanced Models(backbone) -> Object Detection -> API
 
 ### 목차 
-#### 1. Convolutional_NN
- - 합성공에 관한 기본적인 내용을 작성했습니다.
+#### 1. Convolutional_NN(CNN)
+ - 합성곱(CNN)에 관한 기본적인 내용을 작성했습니다.
    
-#### 2. Basic_Models(Network)
+#### 2. Basic_Models, Advanced_Models (BackBone)
  - 초기 CNN 네트워크 기법에 대해 작성했습니다. 
-   
-#### 3. Advanced_Models(Netwokr)
-- 새로운 기법을 적용한 CNN 네트워크 대해 작성했습니다.
 
-#### 4. Object Detection
+#### 3. Object Detection
  - One Stage detection
       - Yolo v1
       - SSD
@@ -25,8 +20,10 @@ CNN ->  Basic Models(backbone) -> Advanced Models(backbone) <br/>
       - Faster RCNN
 
 #### 5. OBject Detection API
+- 객체인식에서 많이 사용하는 API 입니다.
 - Tensorflow Object Detection
 - MMdetection
+- Detectron2
 
 
 ### 참고 자료
