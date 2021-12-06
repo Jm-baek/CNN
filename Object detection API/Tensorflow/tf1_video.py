@@ -20,12 +20,6 @@ from utils_tf1 import visualization_utils as vis_util
 사용버전 : Tensorflow object detection tf1.13 release tutorial 
 사이트: https://github.com/tensorflow/models/blob/57e075203f8fba8d85e6b74f17f63d0a07da233a/research/object_detection/object_detection_tutorial.ipynb
 
-순서
-1. 이미지 한 장 불러와서 읽기   ---> 완료
-2. 영상에서 이미지 한 장씩 가져오기
-3. 이미지 가져오고 박스 값 설정하기
-4. 박스 값 설정된 이미지 영상으로 저장하기
-
 """
 
 
