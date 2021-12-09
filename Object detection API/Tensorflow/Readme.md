@@ -49,3 +49,14 @@ convert_tfrecrod.py
  - https://juhyung.kr/t/practical-tf-2-0-tfrecords/50/1
  - https://medium.com/@rodrigobrechard/tfrecords-how-to-use-sharding-94059e2b2c6b
  - https://www.tensorflow.org/tutorials/load_data/tfrecord#creating_a_tftrainexample_message
+
+
+
+
+2021.12.09
+- 놀라운 사실 
+- tf1_video 파일에서 이미지 1500장 모델 결과 확인하려면 예상시간이 15분이었다.
+- tf1_vcideo_version01 은 1500장이 10초면 끝이난다. 왜? 어떻게?
+- 모델을 memory에 넣는 부분과 tf.Session() as sess를 아예 밖으로 빼서 한 번만 불러오면 되도록 바꿨다..^^
+- 나랑 비슷한 생각을 했던 외쿡 형이 있다. https://stackoverflow.com/questions/54436458/how-to-keep-session-open-while-detecting-over-multiple-images
+- 영상 몇 개 뽑는데 실행시켜놓고 퇴근했는데... 감사하다.
