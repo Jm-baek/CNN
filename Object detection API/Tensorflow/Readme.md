@@ -60,3 +60,8 @@ convert_tfrecrod.py
 - 모델을 memory에 넣는 부분과 tf.Session() as sess를 아예 밖으로 빼서 한 번만 불러오면 되도록 바꿨다..^^
 - 나랑 비슷한 생각을 했던 외쿡 형이 있다. https://stackoverflow.com/questions/54436458/how-to-keep-session-open-while-detecting-over-multiple-images
 - 영상 몇 개 뽑는데 실행시켜놓고 퇴근했는데... 감사하다.
+
+2021.12.14
+- Detected out of order event.step likely caused by a TensorFlow restart. 이러한 에러가 발생할 경우 아래 tensorboard를 실행할 때 같이 작성해주면 된다.
+- 에러 이유는 train 결과와 eval 결과가 겹쳐서(?) 저장 된 것 같은 느낌으로 인한 에러 발생인 것 같다.
+ - --purge_orphaned_data false
