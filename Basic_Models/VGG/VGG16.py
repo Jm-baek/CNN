@@ -43,8 +43,8 @@ def VGG16():
 # version02-VGG16
 def VGG16_02():
     
-    x = Input(shape=(224, 224, 3))
-    
+    inputs = Input(shape=(224, 224, 3))
+
     def vgg_block(x, conv_num, channel):
         # conv2D layer
         for num in range(conv_num):
@@ -55,7 +55,9 @@ def VGG16_02():
     
         return x
     
-    for num, channel_num in zip([2, 2, 3, 3, 3], [64, 128, 256, 512, 512]):
+    # 여기 부분이 무엇인가 아쉽다.
+    x = vgg_block(inputs, 2, 64)
+    for num, channel_num in zip([2, 3, 3, 3], [128, 256, 512, 512]):
         x = vgg_block(x, num, channel_num)
 
     vgg_flatten = Flatten()(x)
