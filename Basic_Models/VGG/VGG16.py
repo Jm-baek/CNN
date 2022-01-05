@@ -58,7 +58,7 @@ def VGG16_02():
     for num, channel_num in zip([2, 2, 3, 3, 3], [64, 128, 256, 512, 512]):
         x = vgg_block(x, num, channel_num)
 
-    vgg_flatten = Flatten()(vgg_block05)
+    vgg_flatten = Flatten()(x)
 
     vgg_dense01 = Dense(4096)(vgg_flatten)
     vgg_dense02 = Dense(1000)(vgg_dense01)
