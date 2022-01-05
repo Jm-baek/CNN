@@ -15,7 +15,6 @@ def vgg_block(x, conv_num, channel):
 
     return x
 
-
 # version01-VGG16
 def VGG16():
     inputs = Input(shape=(224, 224, 3))
