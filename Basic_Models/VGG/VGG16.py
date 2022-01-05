@@ -55,7 +55,7 @@ def VGG16_02():
     
         return x
     
-    # 여기 부분이 무엇인가 아쉽다.
+    # 여기 부분에서 더 깔끔하게 작성할 수 있을 것 같은데 아쉽다.
     x = vgg_block(inputs, 2, 64)
     for num, channel_num in zip([2, 3, 3, 3], [128, 256, 512, 512]):
         x = vgg_block(x, num, channel_num)
