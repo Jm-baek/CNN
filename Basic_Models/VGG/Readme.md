@@ -7,11 +7,12 @@
 
 2. Block
 - VGG부터(?) 모델의 구조가 하나의 Block 처럼 쌓는 형태의 구조가 나타난다.
+- conv2d, conv2d, pooling
 
-아래 그림은 구글에서 줍줍해왔다. 
+**receptive field** 이다.  
 
 ![image](https://user-images.githubusercontent.com/57121112/148213701-acc6efd7-7f0c-4d3c-8b31-5630d413d350.png)
 
-아래 그림은 Block 형태를 확인할 수 있다.  
-- conv2d, conv2d, pooling
+ **Block** 형태를 확인할 수 있다.  
+
 ![image](https://user-images.githubusercontent.com/57121112/148214172-91869867-f157-4ae1-bee4-6153baacd73c.png)
