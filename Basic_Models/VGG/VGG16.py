@@ -4,6 +4,11 @@
 두 번째 버전, 함수 안에 vgg_block 함수를 넣어서 작성해 봤습니다.
 세 번재 버전은 class 로 만들어볼 예정입니다
 """
+import tensorflow as tf
+from tensorflow.keras.models import Model
+from tensorflow.keras.layers import Input, Dense, Conv2D, Flatten 
+from tensorflow.keras.layers import Activation, MaxPooling2D
+from tensorflow.keras.layers import ReLU
 
 def vgg_block(x, conv_num, channel):
     # conv2D layer
