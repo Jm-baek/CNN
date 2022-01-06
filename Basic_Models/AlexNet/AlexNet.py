@@ -1,7 +1,7 @@
 import tensorflow as tf
 from tensorflow.keras.models import Model
 from tensorflow.keras.layers import Input, Dense , Conv2D , Dropout , Flatten 
-from tensorflow.keras.layers import Activation, MaxPooling2D , GlobalAveragePooling2D
+from tensorflow.keras.layers import Activation, MaxPooling2D
 from tensorflow.keras.layers import ReLU
 from tensorflow.nn import local_response_normalization
 
