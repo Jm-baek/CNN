@@ -1,70 +1,96 @@
-"""
-함수로 두가지 버전을 만들어봤습니다.
-첫 번째 버전, vgg_block을 만들고 하나씩 적어서 작성해봤습니다.
-두 번째 버전, 함수 안에 vgg_block 함수를 넣어서 작성해 봤습니다.
-세 번재 버전은 class 로 만들어볼 예정입니다
-"""
-import tensorflow as tf
 from tensorflow.keras.models import Model
-from tensorflow.keras.layers import Input, Dense, Conv2D, Flatten 
-from tensorflow.keras.layers import Activation, MaxPooling2D
-from tensorflow.keras.layers import ReLU
+from tensorflow.keras.layers import Input, Dense, Conv2D, MaxPooling2D
 
-def vgg_block(x, conv_num, channel):
-    # conv2D layer
-    for num in range(conv_num):
-        x= Conv2D(channel, kernel_size=(3, 3), activation='relu', padding='same')(x)
+def VGG(in_shape=(227,227,3), n_classes=10):
+  input_tensor = Input(shape=in_shape)
 
-    # Max pooling layer
-    x = MaxPooling2D(pool_size=(2, 2), strides=2)(x)
+  # Block 1
+  x = Conv2D(64, (3, 3), activation='relu', padding='same', nmae='block1_conv1')(input_tensor)
+  x = Conv2D(64, (3, 3), activation='relu', padding='same', nmae='block1_conv1')(x)
+  x = MaxPooling2D(pool_size=(2, 2), strides=(2, 2), name='block1_pool')(x)
+
+  # Block 2
+  x = Conv2D(128, (3, 3), activation='relu', padding='same', nmae='block2_conv1')(x)
+  x = Conv2D(128, (3, 3), activation='relu', padding='same', nmae='block2_conv2')(x)
+  x = MaxPooling2D(pool_size=(2, 2), strides=(2, 2), name='block2_pool')(x)
+
+  # Block 3
+  x = Conv2D(256, (3, 3), activation='relu', padding='same', nmae='block3_conv1')(x)
+  x = Conv2D(256, (3, 3), activation='relu', padding='same', nmae='block3_conv2')(x)
+  x = Conv2D(256, (3, 3), activation='relu', padding='same', nmae='block3_conv3')(x)
+  x = MaxPooling2D(pool_size=(2, 2), strides=(2, 2), name='block3_pool')(x)
+
+  # Block 4
+  x = Conv2D(512, (3, 3), activation='relu', padding='same', nmae='block4_conv1')(x)
+  x = Conv2D(512, (3, 3), activation='relu', padding='same', nmae='block4_conv2')(x)
+  x = Conv2D(512, (3, 3), activation='relu', padding='same', nmae='block4_conv3')(x)
+  x = MaxPooling2D(pool_size=(2, 2), strides=(2, 2), name='block4_pool')(x)
+
+  # Block 5
+  x = Conv2D(512, (3, 3), activation='relu', padding='same', nmae='block5_conv1')(x)
+  x = Conv2D(512, (3, 3), activation='relu', padding='same', nmae='block5_conv2')(x)
+  x = Conv2D(512, (3, 3), activation='relu', padding='same', nmae='block5_conv3')(x)
+  x = MaxPooling2D(pool_size=(2, 2), strides=(2, 2), name='block5_pool')(x)
+
+  x = GlobalAveragePooling2D()(x)
+  x = Dropout(0.5)(x)
+  x = Dense(120, activation='relu')(x)
+
+  output = Dense(n_classes, activation='softmax')(x)
+
+  model = Model(inputs=inputs, ouputs=outputs)
+
+  return model
+
+
+# block version 
+def conv_block(tensor_in, filters, kernel_size, repeats=2, pool_strides=(2, 2), block_id):
+    """Argument
+        tensor_in: 입력 이미지 tensor
+        filters: filter 개수
+        kernel_size: kernel 크기
+        repeats: conv 연산 회수(Layer 개수)
+    """
+
+    x = tensor_in
+
+    for i in range(repeats):
+        conv_name = 'block' + str(block_id) + '_conv' +str(i+1)
+        x = Conv2D(filters=filters, kernel_size=kernel_size, activation='relu', padding='same', name=conv_name)(x)
+
+    # max pooling 적용하여 출력 feature map의 크기를 절반으로 줄임
+    x = MaxPooling2D(pool_size=(2, 2), strides=pool_strides, name='block' + str(block_id) + '_pool')(x)
 
     return x
 
-# version01-VGG16
-def VGG16():
-    inputs = Input(shape=(224, 224, 3))
 
-    vgg_block01 = vgg_block(inputs, 2, 64)
-    vgg_block02 = vgg_block(vgg_block01, 2, 128)
-    vgg_block03 = vgg_block(vgg_block02, 3, 256)
-    vgg_block04 = vgg_block(vgg_block03, 3, 512)
-    vgg_block05 = vgg_block(vgg_block04, 3, 512)
+def VGG_block(input_shape=(224,224,3), n_classes=10):
 
-    vgg_flatten = Flatten()(vgg_block05)
+    inputs = Input(shape=input_shape, name='Input Tensor')
 
-    vgg_dense01 = Dense(4096)(vgg_flatten)
-    vgg_dense02 = Dense(1000)(vgg_dense01)
+    # Block 1
+    x = conv_block(inputs, filters=64, kernel_size=(3, 3), repeats=2, pool_strides=(2,2), block_id=1)
 
-    model = Model(inputs=inputs, outputs=vgg_dense02)
-
-
-    return model
-
-# version02-VGG16
-def VGG16_02():
+    # Block 2
+    x = conv_block(x, filters=128, kernel_size=(3, 3), repeats=2, pool_strides=(2,2), block_id=2)
     
-    inputs = Input(shape=(224, 224, 3))
+    # Block 3
+    x = conv_block(x, filters=256, kernel_size=(3, 3), repeats=2, pool_strides=(2,2), block_id=3)
 
-    def vgg_block(x, conv_num, channel):
-        # conv2D layer
-        for num in range(conv_num):
-            x= Conv2D(channel, kernel_size=(3, 3), activation='relu', padding='same')(x)
-        
-        # Max pooling layer
-        x = MaxPooling2D(pool_size=(2, 2), strides=2)(x)
-    
-        return x
-    
-    # 여기 부분에서 더 깔끔하게 작성할 수 있을 것 같은데 아쉽다.
-    x = vgg_block(inputs, 2, 64)
-    for num, channel_num in zip([2, 3, 3, 3], [128, 256, 512, 512]):
-        x = vgg_block(x, num, channel_num)
+    # Block 4
+    x = conv_block(x, filters=512, kernel_size=(3, 3), repeats=2, pool_strides=(2,2), block_id=4)
 
-    vgg_flatten = Flatten()(x)
+    # Block 5
+    x = conv_block(x, filters=512, kernel_size=(3, 3), repeats=2, pool_strides=(2,2), block_id=4)
 
-    vgg_dense01 = Dense(4096)(vgg_flatten)
-    vgg_dense02 = Dense(1000)(vgg_dense01)
+    # GlobalAveragePooling 으로 Flatten 적용.
+    x = GlobalAveragePooling2D()(x)
+    x = Dropout(0.5)(x)
+    x = Dense(120, activation='relu')(x)
+    x = Dropout(0.5)(x)
 
-    model = Model(inputs=inputs, outputs=vgg_dense02)
-    
-    return model
+    outputs = Dense(n_classes, activation='softmax')(x)
+
+    model = Model(inputs=inputs, outputs=outputs, name='vgg_by_blockl')
+
+    return  model
